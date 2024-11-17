@@ -40,5 +40,11 @@ namespace SpecFlowProject1.StepDefinitions
 
             throw new PendingStepException();
         }
+        [Given(@"User able to Navigate to Flipkart Home Page")]
+        public void GivenUserAbleToNavigateToFlipkartHomePage()
+        {
+           
+        }
+
     }
 }

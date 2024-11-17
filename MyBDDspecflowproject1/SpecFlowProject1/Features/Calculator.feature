@@ -11,3 +11,6 @@ Scenario: Add two numbers
 	And the second number is 70
 	When the two numbers are added
 	Then the result should be 120
+
+	Scenario: Verify User able to Navigate to Flipkart
+	Given User able to Navigate to Flipkart Home Page
