@@ -1,0 +1,84 @@
+﻿using OpenQA.Selenium;
+using OpenQA.Selenium.Interactions;
+using ReqnrollProject1.Helpers;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Data;
+using DataTable = System.Data.DataTable;
+
+namespace ReqnrollProject1.InterActionMethod
+{
+    internal class InterAction_Methods
+    {
+        public static void VerifyUserAbleToNavigateToDemoQA()
+        {
+            String title = Properties_Collection.Driver.Title.ToString();
+            Assert.AreEqual(title, "DEMOQA", "Not Able To Reach the DemoQA Site");
+
+        }
+
+        public static void UserClicksOnElementsOptions()
+        {
+            IJavaScriptExecutor js = (IJavaScriptExecutor)Properties_Collection.Driver;
+            js.ExecuteScript("arguments[0].scrollIntoView();", UI_Locators.Elements);
+            UI_Locators.Elements.Click();
+
+            //UI_Locators.Elements.Click();
+            String URL = Properties_Collection.Driver.Url;
+            Assert.AreEqual(URL, "https://demoqa.com/elements", "Not Able To reach the ElementsPage");
+        }
+
+        public static void UserClicksOnWebTablesOption()
+        {
+            UI_Locators.Web_Tables.Click();
+        }
+
+        public static void ReadUiWebTables()
+        {
+            DataTable Uitable = new DataTable();
+
+
+            IList<IWebElement> Web_Tables_title = Properties_Collection.Driver.FindElements(By.XPath("/html/body/div[2]/div/div/div/div[2]/div[2]/div[3]/div[1]/div[1]/div/div/div[1]"));
+            foreach (IWebElement table in Web_Tables_title)
+            {
+               
+                string title = table.Text.Trim();
+                Uitable.Columns.Add(title);
+            }
+           
+            IList<IWebElement> Web_tables_data = Properties_Collection.Driver.FindElements(By.XPath("/html/body/div[2]/div/div/div/div[2]/div[2]/div[3]/div[1]/div[2]/div/div"));
+            foreach(IWebElement data in Web_tables_data)
+            {
+               
+                string[] rowvalue = new string[Uitable.Columns.Count];
+                IList<IWebElement> allcells = data.FindElements(By.XPath("div"));
+                foreach (IWebElement cell in allcells)
+                {
+                   
+                    int value = allcells.IndexOf(cell);
+                    rowvalue[allcells.IndexOf(cell)] = cell.Text;
+                }
+
+                Uitable.Rows.Add(rowvalue);
+            }
+        }
+
+        public static void AddDetailsInRegistrationForm()
+        {
+            UI_Locators uiLocators = new UI_Locators();
+            uiLocators.AddRegistration.Click();
+            UI_Locators.Regfrom_FirstName.SendKeys("Roronoa");
+            uiLocators.RegFrom_LastName.SendKeys("Zoro");
+            UI_Locators.RegForm_Email.SendKeys("RoronoaZoro@mail.com");
+            UI_Locators.RegForm_Age.SendKeys("20");
+            UI_Locators.RegFrom_Salary.SendKeys("100000");
+            UI_Locators.RegForm_Department.SendKeys("SwordsMan");
+          
+
+
+        }
+    }
+}
