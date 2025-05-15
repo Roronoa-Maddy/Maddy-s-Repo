@@ -19,3 +19,6 @@ Simple calculator for adding two numbers
 	Then User Clicks on WebTable from Left Side Options
 	And Add Details in Registration form
 	Then User Submits the Registration form
+
+
+	##scenario
