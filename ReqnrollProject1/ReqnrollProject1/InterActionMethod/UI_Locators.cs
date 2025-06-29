@@ -15,6 +15,7 @@ namespace ReqnrollProject1.InterActionMethod
         {
             get
             {
+                //return Properties_Collection.Driver.FindElement(By.Id("nonExistingId"));
                 return Properties_Collection.Driver.FindElement(By.XPath("//h5[text()='Elements']"));
             }
         }
@@ -27,10 +28,11 @@ namespace ReqnrollProject1.InterActionMethod
             }
         }
 
-        internal IWebElement AddRegistration
+        internal static IWebElement AddRegistration
         {
             get
             {
+                //return Properties_Collection.Driver.FindElement(By.Id("elementId"));
                 return Properties_Collection.Driver.FindElement(By.XPath("//button[@id='addNewRecordButton']"));
             }
         }
@@ -43,7 +45,7 @@ namespace ReqnrollProject1.InterActionMethod
             }
         }
 
-        public IWebElement RegFrom_LastName
+        public static IWebElement RegFrom_LastName
         {
             get
             {
@@ -88,6 +90,48 @@ namespace ReqnrollProject1.InterActionMethod
             get
             {
                 return Properties_Collection.Driver.FindElement(By.XPath("//button[text()='Submit']"));
+            }
+        }
+
+
+        public static IWebElement Widgets
+        {
+            get
+            {
+                return Properties_Collection.Driver.FindElement(By.XPath("//*[contains(text(),'Widgets')]"));
+            }
+        }
+
+        public static IWebElement DatePicker
+        {
+            get
+            {
+                return Properties_Collection.Driver.FindElement(By.XPath("//span[text()='Date Picker']"));
+            }
+        }
+
+        public static IWebElement SelectDateBox
+        {
+            get
+            {
+                return Properties_Collection.Driver.FindElement(By.XPath("//input[@id='datePickerMonthYearInput']"));
+            }
+        }
+
+        public static IWebElement NextMonth
+        {
+            get
+            {
+                return Properties_Collection.Driver.FindElement(By.XPath("//*[contains(text(),'Next Month')]"));
+            }
+        }
+
+
+        public static IWebElement DateandTime
+        {
+            get
+            {
+                return Properties_Collection.Driver.FindElement(By.XPath("//input[@id='dateAndTimePickerInput']"));
             }
         }
     }

@@ -33,7 +33,7 @@ namespace ReqnrollProject1.FrameHooks
         {
             Properties_Collection.Driver.Close();
             Properties_Collection.Driver.Quit();
-            Properties_Collection.Driver.Manage().Cookies.DeleteAllCookies();
+          //  Properties_Collection.Driver.Manage().Cookies.DeleteAllCookies();
         }
     }
 }

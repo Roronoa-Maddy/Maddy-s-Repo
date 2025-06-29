@@ -14,7 +14,7 @@ namespace ReqnrollProject1.Helpers
         {
            Properties_Collection.Driver = new ChromeDriver();
            Properties_Collection.Driver.Manage().Window.Maximize();
-           Properties_Collection.Driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(60);
+           //Properties_Collection.Driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(60);
             
         }
 

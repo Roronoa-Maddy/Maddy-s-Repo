@@ -5,17 +5,17 @@
     <RestoreTool Condition=" '$(RestoreTool)' == '' ">NuGet</RestoreTool>
     <ProjectAssetsFile Condition=" '$(ProjectAssetsFile)' == '' ">$(MSBuildThisFileDirectory)project.assets.json</ProjectAssetsFile>
     <NuGetPackageRoot Condition=" '$(NuGetPackageRoot)' == '' ">$(UserProfile)\.nuget\packages\</NuGetPackageRoot>
-    <NuGetPackageFolders Condition=" '$(NuGetPackageFolders)' == '' ">C:\Users\v-madhavans\.nuget\packages\;C:\Program Files (x86)\Microsoft Visual Studio\Shared\NuGetPackages</NuGetPackageFolders>
+    <NuGetPackageFolders Condition=" '$(NuGetPackageFolders)' == '' ">C:\Users\Madhavan\.nuget\packages\;C:\Program Files (x86)\Microsoft Visual Studio\Shared\NuGetPackages</NuGetPackageFolders>
     <NuGetProjectStyle Condition=" '$(NuGetProjectStyle)' == '' ">PackageReference</NuGetProjectStyle>
-    <NuGetToolVersion Condition=" '$(NuGetToolVersion)' == '' ">6.13.2</NuGetToolVersion>
+    <NuGetToolVersion Condition=" '$(NuGetToolVersion)' == '' ">6.14.0</NuGetToolVersion>
   </PropertyGroup>
   <ItemGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
-    <SourceRoot Include="C:\Users\v-madhavans\.nuget\packages\" />
+    <SourceRoot Include="C:\Users\Madhavan\.nuget\packages\" />
     <SourceRoot Include="C:\Program Files (x86)\Microsoft Visual Studio\Shared\NuGetPackages\" />
   </ItemGroup>
   <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
-    <Import Project="$(NuGetPackageRoot)reqnroll.tools.msbuild.generation\2.2.1\build\Reqnroll.Tools.MsBuild.Generation.props" Condition="Exists('$(NuGetPackageRoot)reqnroll.tools.msbuild.generation\2.2.1\build\Reqnroll.Tools.MsBuild.Generation.props')" />
-    <Import Project="$(NuGetPackageRoot)reqnroll.mstest\2.2.1\build\Reqnroll.MsTest.props" Condition="Exists('$(NuGetPackageRoot)reqnroll.mstest\2.2.1\build\Reqnroll.MsTest.props')" />
+    <Import Project="$(NuGetPackageRoot)reqnroll.tools.msbuild.generation\2.4.1\build\Reqnroll.Tools.MsBuild.Generation.props" Condition="Exists('$(NuGetPackageRoot)reqnroll.tools.msbuild.generation\2.4.1\build\Reqnroll.Tools.MsBuild.Generation.props')" />
+    <Import Project="$(NuGetPackageRoot)reqnroll.mstest\2.4.1\build\Reqnroll.MsTest.props" Condition="Exists('$(NuGetPackageRoot)reqnroll.mstest\2.4.1\build\Reqnroll.MsTest.props')" />
     <Import Project="$(NuGetPackageRoot)microsoft.testing.platform\1.2.1\buildTransitive\net8.0\Microsoft.Testing.Platform.props" Condition="Exists('$(NuGetPackageRoot)microsoft.testing.platform\1.2.1\buildTransitive\net8.0\Microsoft.Testing.Platform.props')" />
     <Import Project="$(NuGetPackageRoot)microsoft.testing.platform.msbuild\1.2.1\buildTransitive\net8.0\Microsoft.Testing.Platform.MSBuild.props" Condition="Exists('$(NuGetPackageRoot)microsoft.testing.platform.msbuild\1.2.1\buildTransitive\net8.0\Microsoft.Testing.Platform.MSBuild.props')" />
     <Import Project="$(NuGetPackageRoot)microsoft.testing.extensions.telemetry\1.2.1\buildTransitive\net8.0\Microsoft.Testing.Extensions.Telemetry.props" Condition="Exists('$(NuGetPackageRoot)microsoft.testing.extensions.telemetry\1.2.1\buildTransitive\net8.0\Microsoft.Testing.Extensions.Telemetry.props')" />

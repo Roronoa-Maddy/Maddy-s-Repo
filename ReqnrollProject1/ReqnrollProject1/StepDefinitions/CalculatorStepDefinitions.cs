@@ -1,3 +1,5 @@
+using OpenQA.Selenium;
+using ReqnrollProject1.Helpers;
 using ReqnrollProject1.InterActionMethod;
 
 namespace ReqnrollProject1.StepDefinitions
@@ -5,6 +7,7 @@ namespace ReqnrollProject1.StepDefinitions
     [Binding]
     public sealed class CalculatorStepDefinitions
     {
+        IJavaScriptExecutor js = (IJavaScriptExecutor)Properties_Collection.Driver;
         // For additional details on Reqnroll step definitions see https://go.reqnroll.net/doc-stepdef
 
         [Given("User Able to Navigate DemoQA")]
@@ -41,6 +44,33 @@ namespace ReqnrollProject1.StepDefinitions
         {
             UI_Locators.regFrom_Submit.Click();
         }
+        [When("User Clicks on Widgets Option")]
+        public void WhenUserClicksOnWidgetsOption()
+        {
+            IJavaScriptExecutor js = (IJavaScriptExecutor)Properties_Collection.Driver;
+            js.ExecuteScript("arguments[0].scrollIntoView();", UI_Locators.Widgets);
+            UI_Locators.Widgets.Click();
+        }
+
+        [Then("User Clicks on DatePicker from Left side options")]
+        public void ThenUserClicksOnDatePickerFromLeftSideOptions()
+        {
+            IJavaScriptExecutor js = (IJavaScriptExecutor)Properties_Collection.Driver;
+            js.ExecuteScript("arguments[0].scrollIntoView();", UI_Locators.DatePicker);
+            UI_Locators.DatePicker.Click();
+        }
+        [Then("User Select the Repective date {string}")]
+        public void ThenUserSelectTheRepectiveDate(string date)
+        {
+            InterAction_Methods.UserSelectRespectiveDate(date);
+        }
+
+        [Then("Verify Repective date {string}")]
+        public void ThenVerifyRepectiveDate(string date)
+        {
+            InterAction_Methods.verifytheDateandTime(date);
+        }
+
 
 
     }

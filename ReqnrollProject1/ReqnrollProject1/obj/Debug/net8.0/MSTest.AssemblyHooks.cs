@@ -9,7 +9,7 @@ using global::Reqnroll.MSTest.ReqnrollPlugin;
 using global::System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 
-[GeneratedCode("Reqnroll", "2.2.1")]
+[GeneratedCode("Reqnroll", "2.4.1")]
 [TestClass]
 public class ReqnrollProject1_MSTestAssemblyHooks
 {

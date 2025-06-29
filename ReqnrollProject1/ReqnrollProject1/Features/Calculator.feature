@@ -20,5 +20,12 @@ Simple calculator for adding two numbers
 	And Add Details in Registration form
 	Then User Submits the Registration form
 
+	Scenario:Verify User able to Select Date From calendar
+	Given User Able to Navigate DemoQA 
+	When User Clicks on Widgets Option
+	Then User Clicks on DatePicker from Left side options
+	And User Select the Repective date "30-06-2025"
+	Then Verify Repective date "30-06-2025"
+	
 
 	##scenario
