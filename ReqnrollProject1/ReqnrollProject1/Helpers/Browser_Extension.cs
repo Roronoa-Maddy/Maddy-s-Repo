@@ -34,8 +34,7 @@ namespace ReqnrollProject1.Helpers
             Properties_Collection.Driver.Manage().Window.Maximize();
 
 
-            //I am going to add a new line here 
-            // Going to push new code there
+            //i'm going to push a new line from visual studio
 
         }
 
